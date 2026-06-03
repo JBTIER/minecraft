@@ -10,7 +10,6 @@ const Admin = {
       await Auth.requireAdmin();
       this.showDashboard();
       this.initTabs();
-      this.initForm();
       this.initAddForm();
       await this.loadPlayers();
     } catch (err) {
