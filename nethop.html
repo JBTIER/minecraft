@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NethOP - CrackedTier</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/logo.svg" alt="CrackedTier">
+      <span>Cracked<span>Tier</span></span>
+    </a>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rankings.html">Rankings</a></li>
+      <li><a href="#">Discords</a></li>
+      <li><a href="#">API Docs</a></li>
+    </ul>
+    <div class="navbar-search">
+      <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      <input type="text" id="search-input" placeholder="Search Player">
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </nav>
+
+  <div class="category-bar">
+    <a href="index.html" class="category-card">
+      <img src="assets/icons/overall.svg" alt="Overall">
+      <span>Overall</span>
+    </a>
+    <a href="ltms.html" class="category-card">
+      <img src="assets/icons/ltms.svg" alt="LTMs">
+      <span>LTMs</span>
+    </a>
+    <a href="vanilla.html" class="category-card">
+      <img src="assets/icons/vanilla.svg" alt="Vanilla">
+      <span>Vanilla</span>
+    </a>
+    <a href="uhc.html" class="category-card">
+      <img src="assets/icons/uhc.svg" alt="UHC">
+      <span>UHC</span>
+    </a>
+    <a href="pot.html" class="category-card">
+      <img src="assets/icons/pot.svg" alt="Pot">
+      <span>Pot</span>
+    </a>
+    <a href="nethop.html" class="category-card">
+      <img src="assets/icons/nethop.svg" alt="NethOP">
+      <span>NethOP</span>
+    </a>
+    <a href="smp.html" class="category-card">
+      <img src="assets/icons/smp.svg" alt="SMP">
+      <span>SMP</span>
+    </a>
+    <a href="sword.html" class="category-card">
+      <img src="assets/icons/sword.svg" alt="Sword">
+      <span>Sword</span>
+    </a>
+    <a href="axe.html" class="category-card">
+      <img src="assets/icons/axe.svg" alt="Axe">
+      <span>Axe</span>
+    </a>
+    <a href="mace.html" class="category-card">
+      <img src="assets/icons/mace.svg" alt="Mace">
+      <span>Mace</span>
+    </a>
+  </div>
+
+  <div class="main-container">
+    <div class="page-header">
+      <h1 class="page-title" id="page-title">NethOP Rankings</h1>
+      <p class="page-subtitle" id="page-subtitle">Nether OP leaderboard</p>
+    </div>
+
+    <div class="section-label">Kit Tiers</div>
+    <div class="kit-tiers" id="kit-tiers-container"></div>
+  </div>
+
+  <div class="modal-overlay" id="player-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/rankings.js"></script>
+</body>
+</html>
