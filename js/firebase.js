@@ -9,12 +9,13 @@
 // =============================================================================
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyA-MQyFmNOI_hbp-1bpNKQQ0711wJXcyEM",
+  authDomain: "ctiers-92384.firebaseapp.com",
+  projectId: "ctiers-92384",
+  storageBucket: "ctiers-92384.firebasestorage.app",
+  messagingSenderId: "480397348755",
+  appId: "1:480397348755:web:fc7402bb9258c612092266",
+  measurementId: "G-FB206J48Q2"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -25,7 +26,7 @@ const auth = firebase.auth();
 const PLAYERS_COLLECTION = 'players';
 
 // Admin email - only this email can access the admin dashboard
-const ADMIN_EMAIL = 'ADMIN_EMAIL_HERE';
+const ADMIN_EMAIL = 'verynextgenai@gmail.com';
 
 // =============================================================================
 // DATA LAYER - Firestore CRUD Operations
